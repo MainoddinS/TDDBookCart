@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
@@ -15,7 +16,7 @@ public class ExcelUtil {
 	private static Workbook book;
 	private static Sheet sheet;
 	
-	public static Object [][]getTestData(String sheetName) {
+	public static Object [][]getTestData(String sheetName) throws InvalidFormatException {
 		System.out.println("Reading data from sheet: " +sheetName);
 		
 		Object data [][] = null;

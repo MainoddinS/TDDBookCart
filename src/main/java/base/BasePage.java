@@ -80,6 +80,7 @@ public class BasePage {
 	
 	public ChromeOptions getChromeOptions() throws IOException{
 		co = new ChromeOptions();
+		co.addArguments("--remote-allow-origins=*");
 		if((Boolean.parseBoolean(this.getPropertyFileData("--headless").trim())))
 			{
 			System.out.println("====> Running in Headless chrome");
